@@ -2,6 +2,14 @@ from .logger import set_logger_level
 from .logger_manager import LoggerManager
 
 
+def set_main_logger_name(name: str):
+    LoggerManager.set_main_logger_name(name)
+
+
+def main_set_level(level):
+    set_logger_level(LoggerManager.main_logger_name, level)
+
+
 def main_info(message, indent_level=1):
     LoggerManager.main_logger.info(message, indent_level)
 
@@ -76,7 +84,3 @@ def main_info_insert_adata_layer(key, indent_level=1, *args, **kwargs):
 
 def main_info_verbose_timeit(msg):
     LoggerManager.main_logger.info(msg)
-
-
-def main_set_level(level):
-    set_logger_level(LoggerManager.main_logger_name, level)
