@@ -1,5 +1,5 @@
-from Logger import set_logger_level
-from LoggerManager import LoggerManager
+from .logger import set_logger_level
+from .logger_manager import LoggerManager
 
 def main_info(message, indent_level=1):
     LoggerManager.main_logger.info(message, indent_level)

@@ -1,4 +1,4 @@
-from Logger import *
+from .logger import *
 
 class LoggerManager:
     DEBUG = logging.DEBUG
