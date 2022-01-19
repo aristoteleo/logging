@@ -4,9 +4,9 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "logging-release"
-authors = [{name = "Xiaojie Qiu, Yan Zhang, Ke Ni", email = "dummtindex@gmail.com"}]
+authors = [{name = "Ke Ni, Xiaojie Qiu, Yan Zhang", email = "dummtindex@gmail.com"}]
 readme = "README.md"
 dynamic = ["version", "description"]
 
 [tool.flit.module]
-name = 'dynlog'
+name = 'lack'
