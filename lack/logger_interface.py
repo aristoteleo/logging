@@ -1,6 +1,7 @@
 from .logger import set_logger_level
 from .logger_manager import LoggerManager
 
+
 def main_info(message, indent_level=1):
     LoggerManager.main_logger.info(message, indent_level)
 
@@ -78,4 +79,4 @@ def main_info_verbose_timeit(msg):
 
 
 def main_set_level(level):
-    set_logger_level("dynamo", level)
+    set_logger_level(LoggerManager.main_logger_name, level)

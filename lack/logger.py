@@ -43,7 +43,7 @@ def format_logging_message(msg, logging_level, indent_level=1, indent_space_num=
 
 
 class Logger:
-    """Dynamo-specific logger setting up logging for the package."""
+    """Aristotle ecosystem-specific logger setting up logging for the package."""
 
     FORMAT = "%(message)s"
 

@@ -1,13 +1,20 @@
 from .logger import *
 
+
 class LoggerManager:
     DEBUG = logging.DEBUG
     INFO = logging.INFO
     CRITICAL = logging.CRITICAL
     EXCEPTION = logging.ERROR
 
+    main_logger_name = "dynamo"
     main_logger = Logger("dynamo")
-    temp_timer_logger = Logger("dynamo-temp-timer-logger")
+    temp_timer_logger = Logger("lack-temp-timer-logger")
+
+    @staticmethod
+    def set_main_logger_name(name: str):
+        LoggerManager.main_logger = Logger(name)
+        LoggerManager.main_logger_name = name
 
     @staticmethod
     def get_main_logger():
