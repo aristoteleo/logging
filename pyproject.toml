@@ -3,7 +3,10 @@ requires = ["flit_core >=3.2,<4", "setuptools"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "dynlog"
+name = "logging-release"
 authors = [{name = "Xiaojie Qiu, Yan Zhang, Ke Ni", email = "dummtindex@gmail.com"}]
 readme = "README.md"
 dynamic = ["version", "description"]
+
+[tool.flit.module]
+name = 'dynlog'
