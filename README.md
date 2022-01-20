@@ -1,2 +1,3 @@
 # logging
-Repository for dynamo style's logging functionalities 
+
+Repository of logging functionalities for packages from Aristotle ecosystem. 
