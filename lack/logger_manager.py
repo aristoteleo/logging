@@ -11,13 +11,13 @@ class LoggerManager:
     def gen_logger(namespace: str):
         return Logger(namespace)
 
-    def __init__(self, main_logger_name: str = "lack", temp_timer_logger: str = "lack-temp-timer-logger"):
-        self.set_main_logger_name(main_logger_name)
+    def __init__(self, namespace: str = "lack", temp_timer_logger: str = "lack-temp-timer-logger"):
+        self.set_main_logger_namespace(namespace)
         self.temp_timer_logger = Logger(temp_timer_logger)
 
-    def set_main_logger_name(self, name: str):
-        self.main_logger = Logger(name)
-        self.main_logger_name = name
+    def set_main_logger_namespace(self, namespace: str):
+        self.main_logger = self.gen_logger(namespace)
+        self.namespace = namespace
 
     def get_main_logger(self):
         return self.main_logger
@@ -45,7 +45,7 @@ class LoggerManager:
         logger.finish_progress(progress_name=progress_name, indent_level=indent_level)
 
     def main_set_level(self, level):
-        set_logger_level(self.main_logger_name, level)
+        set_logger_level(self.namespace, level)
 
     def main_info(self, message, indent_level=1):
         self.main_logger.info(message, indent_level)
